@@ -5,7 +5,7 @@ namespace Tests\Browser;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class PubgScrapTest extends DuskTestCase
+class PubgScrap extends DuskTestCase
 {
     public string $save_at_folder = '~/Downloads';
     public string $item_type = '';
