@@ -5,7 +5,7 @@ namespace Tests\Browser;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 
-class PubgScrap extends DuskTestCase
+class PubgScrapTest extends DuskTestCase
 {
     public string $save_at_folder = '~/Downloads';
     public string $item_type = '';
@@ -13,6 +13,7 @@ class PubgScrap extends DuskTestCase
 
     public function testExample(): void
     {
+        $this->makeFolder($this->save_at_folder);
         $this->fetchAndSaveFromUrl('https://pubg.com/en/game-info/weapons/ar');
         $this->fetchAndSaveFromUrl('https://pubg.com/en/game-info/vehicles/land');
     }
