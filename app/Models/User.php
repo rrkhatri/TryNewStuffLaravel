@@ -77,8 +77,8 @@ class User extends Authenticatable
     {
         return [
             'id' => (string) $this->id,
-            'title' => $this->information['title'],
-            'description' => $this->information['description'],
+            'title' => $this?->information['title'] ?? '',
+            'description' => $this?->information['description'] ?? '',
             'created_at' => $this->created_at->timestamp,
         ];
     }
